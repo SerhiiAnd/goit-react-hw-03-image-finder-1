@@ -1,5 +1,5 @@
-// Searchbar.jsx
 import React, { useState } from 'react';
+import css from 'components/Searchbar/Searchbar.module.css';
 
 const Searchbar = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -11,13 +11,13 @@ const Searchbar = ({ onSubmit }) => {
   };
 
   return (
-    <header className="searchbar">
-      <form className="form" onSubmit={handleSubmit}>
-        <button type="submit" className="button">
+    <header className={css.searchbar}>
+      <form className={css.searchForm} onSubmit={handleSubmit}>
+        <button type="submit" className={css.searchFormButton}>
           <span className="button-label">Search</span>
         </button>
         <input
-          className="input"
+          className={css.searchFormInput}
           type="text"
           autoComplete="off"
           autoFocus

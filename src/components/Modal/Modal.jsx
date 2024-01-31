@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import css from 'components/Modal/Modal.module.css';
 
 const Modal = ({ largeImageURL, onClose }) => {
   useEffect(() => {
@@ -22,8 +23,8 @@ const Modal = ({ largeImageURL, onClose }) => {
   };
 
   return (
-    <div className="overlay" onClick={handleOverlayClick}>
-      <div className="modal">
+    <div className={css.overlay} onClick={handleOverlayClick}>
+      <div className={css.modal}>
         <img src={largeImageURL} alt="" />
       </div>
     </div>

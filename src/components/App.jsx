@@ -82,6 +82,7 @@ import Button from './Button/Button';
 
 import { Loader } from './Loader/Loader';
 import Modal from './Modal/Modal';
+import css from 'components/App.module.css';
 
 const App = () => {
   const apiKey = '40631901-ff7c1609fa7e5ab5e54020e9b';
@@ -133,7 +134,7 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div className={css.app}>
       <Searchbar onSubmit={handleSearchSubmit} />
       {images.length > 0 && (
         <ImageGallery images={images} onImageClick={handleImageClick} />
