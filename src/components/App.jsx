@@ -23,8 +23,7 @@ class App extends Component {
   }
 
   fetchData = async () => {
-    const { page, apiKey } = this.state;
-    const { query } = this.state;
+    const { page, apiKey, query } = this.state;
 
     try {
       this.setState({ loading: true });
@@ -42,9 +41,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    if (this.state.query) {
-      this.fetchData();
-    }
+    this.fetchData();
   }
 
   componentDidUpdate(prevProps, prevState) {
