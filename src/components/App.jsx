@@ -17,7 +17,7 @@ class App extends Component {
       images: [],
       loading: false,
       page: 1,
-      largeImageURL: '',
+        largeImageURL: '',
       showModal: false,
     };
   }
